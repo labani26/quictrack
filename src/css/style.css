@@ -73,11 +73,10 @@ header{
   margin: auto;
 }
 .track {
-  width: 100%;
   border: 3px solid #000;
 }
 input[type=text] {
-  width: 100%; 
+   width: 110%;
   box-sizing: border-box;
   padding: 12px 20px;
   margin: 8px 0;
@@ -152,9 +151,28 @@ input[type=text] {
 
 }
  .function {
-
- 
+  height: 130%;
+  width: 100%;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;  
+  align-items: center; 
   margin:auto;
+  /* display: none !important; */
   
  }
- 
+ .track-table {
+  width: 100%; 
+    display: flex; 
+     gap: 25px; 
+    justify-content: space-around  
+    
+ } 
+  .date-time{
+  justify-content: space-around;
+  gap: 20px;
+ }
+ .total-amount{
+  justify-content: space-around;
+  gap: 20px;
+ } 

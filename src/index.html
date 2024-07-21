@@ -30,32 +30,28 @@
 </head>
 
 <body>
-  
-    <header>
-      <h1>QuickTrack</h1>
-    </header>
 
-    
-    <form>
+  <header>
+    <h1>QuickTrack</h1>
+  </header>
+  <form id="track-form">
 
-      <input type="text" id="track" class="track" placeholder="what are you working on ?">
-      <button id="Add Task" class="Add_Task"> Add Task </button>
+    <input type="text" id="quicktrack_topic" class="track" placeholder="what are you working on ?" onChange={onChange}>
+    <button id="add_task" class="Add_Task" onClick={handleClick}> Add Task </button>
 
-    </form>
-    <br>
+  </form>
 
-    <section class="Task">
+  <section class="Task">
 
-      <div class="function">
+    <div class="function">
 
-        <h2 class="your_tasks">Your Tasks</h2>
-         
-        <div class="container">
+      <h2 class="your_tasks">Your Tasks</h2>
+
+      <div class="container">
         <div class="write">
-          <input type="text" id="track" class="track" placeholder="Add a new Task ?">
+          <textarea type="text" value={text} id="track-input" class="track" placeholder="Add a new Task ?" onChange={onChange} ></textarea>
         </div>
         <br>
-
         <div id="time">
           <span class="digit" id="hr">
             00</span>
@@ -70,24 +66,40 @@
             00</span>
         </div>
         <br>
-
-        <div>
-          <button id="start" class="start"> Start </button>
-          <button id="Stop" class="Stop"> Stop </button>
+        <div id="button">
+          <button id="start" class="start" onClick={handleClick}> Start </button>
+          <button id="Stop" class="Stop" onClick={handleClick}> Stop </button>
         </div>
 
         <br>
 
         <div>
-          <button id="delete" class="delete"> Delete </button>
+          <button id="delete-button" class="delete" onClick={handleClick}> Delete </button>
+        </div>
+        <br>
+
+        <div class="track-table">
+          <table>
+            <thead>
+              <tr class="date-time">
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="track-list"></tbody>
+          </table>
+          <div class="total-amount">
+            <strong>Total Timing:</strong>
+            <span id="total-amount">0</span>
+          </div>
         </div>
 
       </div>
 
-    </section>
+
+  </section>
   </div>
 
-  <script src="index.js"></script>
+  <script src="quicktrack.js"></script>
 
 </body>
 
